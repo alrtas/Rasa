@@ -1,7 +1,9 @@
-# Rasa 
+# Sara
 
-Respositório criado com o objetivo de cumprir o desafio proposto pela empresa S***** onde é feito a criação de um Chatbot, utilizando [Rasa](https://rasa.com/) que é uma plataforma conversacional com I.A. embarcada. O mesmo desafio também foi realizado utilizando o ([BLiP](https://www.take.net/) + [WIT](https://wit.ai/)), sendo o BLiP o construtor e orquestrador do fluxo conversacional e o WIT o provedor de processamento de lingaguem natural.
+Assistente criada com o objetivo de cumprir o desafio proposto pela empresa S***** onde é feito a criação de um Chatbot, utilizando [Rasa](https://rasa.com/) que é uma plataforma conversacional com I.A. embarcada. O mesmo desafio também foi realizado utilizando o ([BLiP](https://www.take.net/) + [WIT](https://wit.ai/)), sendo o BLiP o construtor e orquestrador do fluxo conversacional e o WIT o provedor de processamento de lingaguem natural.
 
+
+São propostas dois fornecedores diferentes para montagem do fluxo, alguns conceitos não foram aplicados porém uma vez que o fluxo fosse elegivel para publicação deverão ser refatoardos, como a criação de BOTs de apoio para reutilização de sub-bots/sub-sistemas, trazendo partes do BOT que poderão ser comuns para outros fluxos automatizados, como a parte de cadastro de cliente, encerramento e pesquisa de satisfação, termos de uso, atendimento humano. Evitando que haja código duplicado, aumentando a escalabilidade, diminuindo tempos de desenvolvimento e melhorando a confiança geral do fluxo.
 
 ## Ecossistema BLiP + WIT
  
