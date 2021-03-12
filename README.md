@@ -15,7 +15,6 @@ São propostas dois fornecedores diferentes para montagem do fluxo, alguns conce
  * Link para teste do Fluxo disponivel [aqui](https://chat.blip.ai/?appKey=cmFzYTo2MTQ5ODAxNi03Y2QwLTQ3MzktOTBjOC02ZTA3OWMyMGYzN2M=)
 ### Prototipo de baixa fidelidade
 ![image](https://user-images.githubusercontent.com/32065208/110889960-e5308180-82cd-11eb-804d-0f5c3727b168.png)
-![image](https://user-images.githubusercontent.com/32065208/110890363-aa7b1900-82ce-11eb-96aa-e38cbcf62d35.png)
 
 
 
