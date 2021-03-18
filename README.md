@@ -21,6 +21,7 @@ Alguns caminhos
   - Quais as vantagens? 
   - 2 dúvidas sobre emprestimo pessoal
   - 2 dúvidas sobre emprestimo para autonomo 
+  - 2 dúvidas sobre emprestimos para negativados
 
 Algumas regras de negócio:
 - Cliente pode solicitar o atendimento humano a qualquer momento
