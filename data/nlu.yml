@@ -16,7 +16,7 @@ nlu:
     - vamos la
     - eai voce
     - fala 
-    - fala amigo
+    - falar amigo
 
 - intent: atendimento_humano
   examples: |
@@ -29,7 +29,41 @@ nlu:
     - pessoa
     - ajuda
 
-- intent: simular_credito_pessoal
+- intent: nome_entry
+  examples: |
+    - meu nome é [Thiago](nome)
+    - eu sou [Rodrigo](nome)
+    - me chamo [Ricardo](nome)
+    - meu nome completo é [Roberto Justos Silveira](nome)
+
+- intent: cpf_entry
+  examples: |
+    - cpf [110.786.750-90](cpf)
+    - meu cpf é: [06167747024](cpf)
+    - [37863940087](cpf)
+    - [828.821.040-65](cpf)
+
+- intent: valor_entry
+  examples: |
+    - [3000](valor) reais
+
+- intent: meses_entry
+  examples: |
+    - [12](meses) meses
+
+- intent: cadastro_enqiry
+  examples: |
+    - meu nome é [Thiago](nome) portador do CPF [09489601918](cpf)
+    - meu nome é [Juca](nome) e meu CPF é [094.896.019-18](cpf)
+    - meu sou [Tadeu](nome) e meu CPF é [094.896.01918](cpf)
+    - [Joao](nome), CPF [45490392991](cpf)
+    - meu nome é [paulo](nome)
+    - eu sou [Rodrigo](nome)
+    - me chamo [Ricardo](nome)
+    - meu nome completo é [Roberto Justos Silveira](nome)
+    - meu cpf é [09489601911](cpf)
+
+- intent: simular_credito_enqiry
   examples: |
     - ver credito pessoal
     - credito pessoal
@@ -71,6 +105,7 @@ nlu:
     - ok 
     - tudo certo
     - entendi
+
 - intent: negacao
   examples: |
     - nao
@@ -101,95 +136,3 @@ nlu:
     - Qual a diferenca do emprestimo para autonomo
     - Como eu comparo o credito para autonomo com outros creditos
 
-
-
-
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
-- intent: goodbye
-  examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?

@@ -2,6 +2,26 @@ version: "2.0"
 
 stories:
 
+
+- story: atendimento
+  steps:
+    - intent: atendimento_humano
+    - action: cadastro_form
+    - active_loop: cadastro_form
+    - slot_was_set:
+      - requested_slot: nome
+    - slot_was_set:
+      - nome: vincent
+    - slot_was_set:
+      - requested_slot: cpf
+    - slot_was_set:
+      - cpf: 09489601918
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: utter_submit
+    - action: utter_slots_values
+
 - story: simulador
   steps:
     - intent: saudacao
@@ -38,6 +58,9 @@ stories:
     - action: utter_menu
     - intent: duvida_tipoCredito
     - action: utter_tipo_credito
+    - action: utter_algoMais
+    - intent: afirmacao
+    - action: utter_encerramento
 
 - story: quem_oferece
   steps:
@@ -64,52 +87,7 @@ stories:
   steps:
     - intent: saudacao
 
-- story: faq_garantiaImovel
-  steps:
-    - intent: saudacao
-
-- story: faq_autonomoNegativado
-  steps:
-    - intent: saudacao
-
-- story: faq_semRenda
-  steps:
-    - intent: saudacao
 
 - story: faq_negativado
   steps:
     - intent: saudacao
-
-
-
-
-
-
-
-
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye

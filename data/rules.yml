@@ -11,3 +11,21 @@ rules:
   steps:
    - intent: encerramento
    - action: utter_encerramento
+
+
+- rule: ACTIVATE cadastro_form
+  steps:
+    - intent: utter_ask_nome
+    - action: cadastro_form
+    - active_loop: cadastro_form
+
+- rule: SUBMIT cadastro_form
+  condition:
+    - active_loop: cadastro_form
+  steps:
+    - action: cadastro_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_submit
+    - action: utter_slots_values
