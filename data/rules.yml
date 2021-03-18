@@ -2,23 +2,15 @@ version: "2.0"
 
 rules:
 
+- rule: out_of_scope
+  steps:
+    - intent: nlu_fallback
+    - action: utter_out_of_scope
+
 - rule: Redireciona atendimento humano em qualquer momento
   steps: 
    - intent: atendimento_humano
-   - slot_was_set:
-      - requested_slot: nome
-    - slot_was_set:
-      - nome: vincent
-    - slot_was_set:
-      - requested_slot: cpf
-    - slot_was_set:
-      - cpf: 09489601918
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: utter_submit
-    - action: utter_slots_values
-    - action: utter_atendimento
+   - action: utter_atendimento
 
 - rule: Encerramento
   steps:

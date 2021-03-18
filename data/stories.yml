@@ -87,8 +87,12 @@ stories:
 - story: faq_autonomo
   steps:
     - intent: saudacao
+    - action: utter_menu
+    - intent: taxasCobradas_emprestimoPessoal
 
 
 - story: faq_negativado
   steps:
     - intent: saudacao
+    - action: utter_menu
+    - intent: taxasCobradas_emprestimoPessoal
