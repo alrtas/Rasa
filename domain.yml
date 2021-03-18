@@ -1,6 +1,13 @@
 version: "2.0"
 
 intents:
+  - saudacao
+  - encerramento
+  - simular_credito_pessoal
+  - duvida_tipoCredito
+  - duvida_rasaCred
+  - duvida_quemOferece
+  - duvida
   - greet
   - goodbye
   - affirm
@@ -9,7 +16,49 @@ intents:
   - mood_unhappy
   - bot_challenge
 
+
+actions:
+ - action_hello_world
+
 responses:
+  utter_atendimento:
+  - text: "Ok, em breve um dos nossos especialistas em crédito vai estar te atendendo, para agilizar já detalhe melhor abaixo sua dúvida."
+  
+  utter_saudacao:
+  - text: "Olá! seja bem-vindo(a)! Menu nome é Sara e sou a assistente virtual do Rasa."
+  
+  utter_menu:
+  - text: "Hoje estarei lhe auxiliando com quaisquer dúvidas relacionadas ao mundo de empréstimos. Abaixo, me conta no que eu posso estar te auxiliando."
+  
+  utter_algoMais:
+  - text: "🤖 Conta pra mim, consegui descomplicar o crédito?"
+  
+  utter_encerramento:
+  - text: "🤖 Agradeço seu contato, até uma próxima! Não esqueça de higienizar as mãos. #vaiMelhorar"
+
+  utter_vantagens_rasaCred:
+  - text: "Tem de tudo: Taxas a partir de 0,75% a.m. e cartões com diversos benefícios."
+  - text: "É na faixa: Simule e compare quantas vezes quiser sem pagar nada por isso."
+  - text: "Num piscar de olhos: Dinheiro rápido e direto na conta."
+  - text: "Vem sem medo: A Serasa garante a privacidade e segurança das suas informações."
+  - text: "E tudo isso em apenas 3 passos. 1 -> Complete seu perfil, 2 -> Veja e compare as opções, 3 -> Contrate seu crédito em poucos minutos"
+
+  utter_tipo_credito:
+  - text: "No que diz respeito a crédito eu consigo te ajudar, veja qual das opções abaixo temos disponível."
+  - text: "Empréstimo pessoal. Crédito rápido e online para usar como quiser."
+  - text: "Empréstimo consignado. Empréstimo para aposentado e pensionista com crédito sem avalista."
+  - text: "Empréstimo com garantia. A melhor forma de conseguir maiores valores com as menores taxas."
+  - text: "Cartão de crédito. Parcele suas compras, acumule pontos e aproveite benefícios."
+  - text: "Cartão pré-pago. A melhor opção pra quem quer crédito, mas ainda precisa de uma mãozinha no score."
+
+  utter_quemOferece:
+  - text: "Olha, a lista de parceiros que estão disposto a te ajudar é grande, confere abaixo:"
+  - text: "Itau, Credicard, BV, Santander, Digio, Creditas"
+
+
+
+
+
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -28,6 +77,144 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+
+  utter_faq_emprestimoConsignado:
+  - text: "O crédito consignado é uma das linhas de crédito mais baratas do mercado, por isso é uma mão na roda em várias situações. Quem trabalha com carteira assinada, é aposentado, pensionista do INSS ou funcionário público pode acessar o empréstimo com facilidade. Leia mais sobre o assunto no Serasa Ensina."
+
+  utter_faq_crediario:
+  - text: "O crediário é uma forma de financiamento que, em geral, permite maior número de parcelas do que um cartão de crédito." 
+
+  utter_faq_financiamento:
+  - text: "Assim como o empréstimo bancário, o financiamento também é um contrato entre o cliente e a instituição financeira, mas com destinação específica dos recursos tomados, como a aquisição de veículo ou de imóvel por exemplo. Geralmente o financiamento possui algum tipo de garantia, como alienação fiduciária ou hipoteca." 
+
+  utter_faq_emprestimo:
+  - text: "É um contrato entre o cliente e a instituição financeira pelo qual ele recebe uma quantia que deverá ser devolvida à instituição em prazo determinado, acrescida dos juros acertados. Os recursos obtidos no empréstimo não têm destinação específica."
+
+  utter_faq_scoreInfluencia:
+  - text: "O Serasa Score é uma pontuação obtida a partir da análise de informações existentes na base de dados da Serasa e relacionadas às consultas realizadas pelos clientes da Serasa são combinadas e se transformam em uma pontuação. Essa pontuação pode ser utilizada como um dos critérios para liberação do crédito por uma instituição financeira. Em geral, quanto maior seu score, mais chances de ter crédito aprovado."
+  
+  utter_faq_scoreComoSaber:
+  - text: "Acesse: www.serasascore.com.br e faça o login. Você saberá imediatamente e de graça qual o seu Serasa Score."
+  
+  utter_faq_scoreBaixoEmprestimo:
+  - text: "Sim, é possível. Porém suas chances poderão ser maiores com um score mais alto. Além disso, com um score mais alto, as instituições financeiras poderão oferecer condições melhores para você, como taxa de juros. Veja nossas dicas de como aumentar seu Serasa Score no Serasa Ensina."
+  
+  utter_faq_scoreAltoEmprestimo: 
+  - text: "Um Serasa Score alto não significa que sua proposta de crédito será aprovada. O score alto aumenta suas chances de conseguir o crédito. Recomendamos que você entre em contato diretamente com a instituição financeira. Infelizmente, elas não são obrigadas a informar o motivo de recusa de crédito."
+  
+  utter_faq_EcredAumentaScore:
+  - text: "Seu histórico de pagamentos pode influenciar positivamente o seu Serasa Score. Pagar suas contas em dia e ter o Cadastro Positivo aberto podem contribuir com a sua pontuação, independentemente de onde você solicita empréstimo ou cartão de crédito."
+  
+  utter_faq_creditoNomeSujo:
+  - text: "Sim, é possível. Porém, ter o nome sujo pode significar que você terá que pagar maiores taxas de juros nos empréstimos. Por isso, recomendamos, se possível, que você organize suas finanças antes de buscar crédito. Acesse nossas dicas no Serasa Ensina."
+  
+  utter_faq_cpfSuspensoCredito:
+  - text: "CPF suspenso, cancelado ou pendente de regularização pode impedir que o consumidor contrate diversos tipos de produtos e serviços financeiros, inclusive o crédito pessoal e cartão de crédito."
+
+  utter_faq_processoOnline:
+  - text: "Na maioria dos casos, sim. Porém, devido a limitações de alguns parceiros, em alguns casos o processo poderá ter passos offline."
+
+  utter_faq_creditoImobiliario:
+  - text: "Por enquanto, o Serasa eCred disponibiliza ao consumidor apenas dois tipos de crédito: empréstimo pessoal e cartão de crédito, não abrangendo crédito imobiliário. Mas estamos sempre buscando novos parceiros que ofereçam novas modalidades de crédito para atender melhor aos consumidores."
+
+  utter_faq_financiamentoVeiculo:
+  - text: "Por enquanto, o Serasa eCred disponibiliza ao consumidor apenas dois tipos de crédito: empréstimo pessoal e cartão de crédito, não abrangendo financiamento de veículos. Mas estamos sempre buscando novos parceiros que ofereçam novas modalidades de crédito para atender melhor aos consumidores."
+
+  utter_faq_naoTemParcelas:
+  - text: "Neste caso, recomendamos que você tente simular outros valores para analisar as propostas dos parceiros."
+
+  utter_faq_naoApareceOferta:
+  - text: "Os parceiros do Serasa eCred atuam de acordo com as suas próprias políticas de crédito, sem interferência do Serasa eCred. Se não há nenhuma proposta de crédito disponível, provavelmente seu perfil não se enquadra nas políticas internas dos parceiros. Mas você ainda pode tentar algumas alternativas:
+  Simule outras combinações de valores e parcelas. Pode ser que algum parceiro tenha uma oferta de crédito de menor valor para você;
+  O Serasa Score pode ou não ser utilizado pelos parceiros para a decisão de conceder o crédito. Apesar disso, aumentar o Score pode ajudar você a conseguir ofertas de crédito. Veja nossas dicas de como aumentar seu Serasa Scoreno Serasa Ensina.
+  Além disso, o Serasa eCred busca cada vez mais parceiros para que assim você tenha mais oportunidades de conseguir o seu crédito ideal, com condições e ofertas únicas e acessíveis."
+
+  utter_faq_scoreAltoOfertaAlta:
+  - text: "Cada parceiro do Serasa eCred tem suas próprias políticas e regras internas, sem interferência do Serasa eCred. Infelizmente, nem sempre um Score alto significa baixas taxas de juros. Além disso, o Serasa eCred busca cada vez mais parceiros para que assim você tenha mais oportunidades de conseguir o seu crédito ideal, com condições e ofertas únicas e acessíveis."
+  
+  utter_faq_iof:
+  - text: "Em geral, as instituições financeiras não inserem o IOF na taxa de juros. Porém, o IOF faz parte do CET (Custo Efetivo Total) da operação, que permite ao consumidor avaliar qual a melhor opção de crédito."
+
+  utter_faq_limiteTaxaDeJuros:
+  - text: "Não. Nas operações de crédito com recursos livres, as taxas de juros são livremente pactuadas entre as instituições financeiras e os tomadores. Destacam-se, entre essas operações, as modalidades cheque especial, crédito pessoal, cartão de crédito, capital de giro e aquisição de bens."
+
+  utter_faq_ofertaDeCredito:
+  - text: "Não, uma oferta de crédito quer dizer que você se enquadra nos pré-requisitos para que aquela instituição financeira possa analisar seu pedido de crédito."
+  
+  utter_faq_contratoEmAndamento:
+  - text: "Sim, é possível. Porém, recomendamos que, antes de contratar um novo crédito, você faça uma análise criteriosa da necessidade e acesse nossas dicas no Serasa Ensina para não comprometer seu orçamento familiar."
+  
+  utter_faq_simulacaoTentarNovamente:
+  - text: "Não há limite para simulações e pedidos de crédito"
+
+  utter_faq_cartao_limiteBaixo:
+  - text: "Cada parceiro do Serasa eCred tem suas próprias políticas e regras internas, que podem ser diferentes entre cada um deles. Isso quer dizer que o limite do cartão de crédito é determinado pelo próprio parceiro. Em geral, uma maneira de conseguir limites mais altos é complementar a sua renda. Além disso, é importante cuidar dos seus compromissos de pagamento, evitando atrasar contas, faturas e parcelas de financiamento. Se possível, evite comprometer mais de um terço da renda com empréstimos e cartão de crédito."
+
+  utter_faq_cartao_limiteMaior:
+  - text: "Em geral, uma maneira de conseguir limites de cartão de crédito mais altos é complementar a sua renda. Além disso, é importante cuidar dos seus compromissos de pagamento, evitando atrasar contas, faturas e parcelas de financiamento. Se possível, evite comprometer mais de um terço da renda com empréstimos e cartão de crédito."
+
+  utter_faq_cartao_bandeira:
+  - text: "Cada parceiro do Serasa eCred tem suas próprias políticas e regras internas, que podem ser diferentes entre cada um deles. Isso quer dizer que alguns deles podem operar com mais de uma bandeira. Algumas das bandeiras oferecidas por nossos parceiros são: Mastercard e Visa."
+
+  utter_faq_cartao_milhas:
+  - text: "Os benefícios de cada cartão são determinados pelos parceiros do Serasa eCred. Por enquanto, você deve consultar essas informações diretamente com os parceiros. Logo, logo o Serasa eCred disponibilizará os benefícios de cada cartão em sua própria plataforma."
+  
+  utter_faq_cartao_platinumBlack:
+  - text: "Cada parceiro do Serasa eCred tem suas próprias políticas e regras internas, que podem ser diferentes entre cada um deles. Isso quer dizer que o tipo do cartão (platinum, black, etc.) é determinada pelo próprio parceiro. Em geral, uma maneira de conseguir cartões com mais benefícios e limites de crédito mais altos é complementar sua renda. Além disso, é importante cuidar dos seus compromissos de pagamento, evitando atrasar contas, faturas e parcelas de financiamento. Se possível, evite comprometer mais de um terço da renda com empréstimos e cartão de crédito."
+  
+  utter_faq_cartao_pedirNomeOutro:
+  - text: "Antes de conceder, ou não, um cartão para você, o banco ou financeira analisou o seu perfil financeiro. Ao permitir que outra pessoa use seu cartão, você está colocando o seu próprio nome em risco."
+  
+  utter_faq_cartao_dependente:
+  - text: "Os benefícios de cada cartão são determinados pelos parceiros do Serasa eCred. Por enquanto, você deve consultar essas informações diretamente com os parceiros. Logo, logo o Serasa eCred disponibilizará os benefícios de cada cartão em sua própria plataforma."
+
+  utter_faq_valoresOfertadosDiferentes:
+  - text: "Cada parceiro do Serasa eCred tem suas próprias políticas e regras internas, sem interferência do Serasa eCred. Pode ser que a sua solicitação não se enquadre na política do parceiro, mas esteja próxima das condições que ele pode te oferecer. Nesse caso, o parceiro pode fazer uma contraoferta para você."
+  
+  utter_faq_precisoPagarAprovacao:
+  - text: "O Serasa eCred é totalmente gratuito. Você não precisa pagar para usar a plataforma ou para ser aprovado."
+
+  utter_faq_precisaFiador:
+  - text: "Essa informação deve ser verificada diretamente com o parceiro, pois é ele quem define quais os pré-requisitos para aprovação, sem a interferência do Serasa eCred."
+  
+  utter_faq_garantia: 
+  - text: "Essa informação deve ser verificada diretamente com o parceiro, pois é ele quem define quais os pré-requisitos para aprovação, sem a interferência do Serasa eCred.Em geral, oferecer uma garantia pode ajudar você a conseguir melhores condições de crédito. Isso porque, nesse tipo de empréstimo, o carro ou o bem dado em garantia fica alienado em nome da empresa. Isso significa que ela tem direito à propriedade parcial ou total desse bem garantia em caso de inadimplência."
+
+  utter_faq_ecred_pagar:
+  - text: "Não, o Serasa eCred é uma plataforma gratuita para o consumidor. Você deverá pagar pelo crédito adquirido diretamente ao parceiro."
+
+  utter_faq_analiseCredito:
+  - text: "Os bancos fazem análise de seus dados e documentos para conceder o crédito."
+
+  utter_faq_sinalAprovamento:
+  - text: "Não. A aprovação não depende de pagamento prévio."
+  
+  utter_faq_segurancaEnviarFoto:
+  - text: "Sim, este site está em acordo com as políticas de segurança da Serasa Experian. Os dados dos consumidores são criptografados, e foram implantadas diversas ferramentas para identificar e combater ameaças de fraude."
+
+  utter_faq_finalizarSiteParceiro:
+  - text: "Alguns de nossos parceiros não estão totalmente integrados ao Serasa eCred. Isso quer dizer que em alguns casos os consumidores terão que finalizar o processo em outro site ou aplicativo."
+  
+  utter_faq_naoRecebiRetorno:
+  - text: "Caso você não tenha recebido retorno dentro do período de 5 dias úteis, por favor, entre em contato diretamente com o parceiro."
+  
+  utter_faq_bancoObrigadoConceder:
+  - text: "Não. Cada instituição financeira pode estabelecer critérios próprios para a concessão."
+
+  utter_faq_creditoNaoAprovado:
+  - text: "A decisão de aprovação do crédito é exclusiva de cada parceiro do Serasa eCred;
+  Para saber o motivo da não aprovação, verifique diretamente com o parceiro;
+  Você ainda pode tentar o crédito com outros parceiros do eCred. Basta fazer uma nova simulação;
+  Também é possível consultar seu CPF e saber se existe alguma restrição no seu nome;
+  Se preferir, você pode conferir o seu Serasa Score e avaliar qual é a sua pontuação de crédito;
+  Além disso, você também pode consultar restrições em seu nome em outros birôs de crédito."
+
+  utter_faq_pagamentoAntecipado:
+  - text: "Sim, as normas do Conselho Monetário Nacional garantem ao cliente o direito à liquidação antecipada total ou parcial com redução proporcional dos juros. As instituições financeiras devem informar as condições para essa antecipação."
+
+  utter_faq_foraEcred:
+  - text: "Infelizmente, se uma empresa não é parceira do Serasa eCred, você terá que entrar em contato diretamente com ela."
 
 session_config:
   session_expiration_time: 60

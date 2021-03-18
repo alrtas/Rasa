@@ -1,6 +1,109 @@
 version: "2.0"
 
 nlu:
+
+- intent: saudacao
+  examples: |
+    - oi
+    - ola
+    - boa tarde
+    - boa noite
+    - bom dia
+    - eai
+    - ooi
+    - oii
+    - olla
+    - vamos la
+    - eai voce
+    - fala 
+    - fala amigo
+
+- intent: atendimento_humano
+  examples: |
+    - humano
+    - falar com humano
+    - falar com especialista
+    - falar com alguem
+    - alguem me ajuda
+    - falar com pessoa
+    - pessoa
+    - ajuda
+
+- intent: simular_credito_pessoal
+  examples: |
+    - ver credito pessoal
+    - credito pessoal
+    - simulador
+    - simulacao de credito
+    - simulacao de credito pessoal
+    - simular credito de [3000](valor_credito)
+    - simular credito de [7000](valor_credito)
+    - credito pessoaç de [12000](valor_credito)
+    - simular emprestimo de [30000](valor_credito)
+    - credito de [30000](valor_credito) em [12](meses) vezes
+    - credito de [12000](valor_credito) em [6](meses) meses
+    - simular credito de [7000](valor_credito) em [18](meses) meses
+    - simular emprestimo em [24](meses) vezes
+
+- intent: duvida_rasaCred
+  examples: |
+    - Quais as vantanges do rasa cred? 
+    - Quais as vantanges do rasa? 
+    - O que eu ganho usando o rasa cred?
+
+- intent: duvida_tipoCredito
+  examples: |
+    - Quais os tipos de credito?
+    - Que creditos estão disponiveis?
+    - tipos de credito
+
+- intent: duvida_quemOferece
+  examples: |
+    - Quem oferece credito?
+    - Quais os parceiros de credito?
+    - Quem fornece o emprestimo?
+
+- intent: afirmacao
+  examples: |
+    - sim
+    - claro
+    - com certeza
+    - ok 
+    - tudo certo
+    - entendi
+- intent: negacao
+  examples: |
+    - nao
+    - nao entendi
+    - nao ajudou
+
+- intent: documentosPedidos_emprestimoPessoal
+  examples: |
+    - Quais documentos sao necessarrios para pedir meu emprestimo?
+    - Que documento preciso para pedir emprestimo?
+    - Documentos para emprestimo
+
+- intent: taxasCobradas_emprestimoPessoal
+  examples: |
+    - Quais outras taxas podem ser cobradas nesse tipo de emprestimo?
+    - Que taxas podem cobrar?
+    - Quais sao as taxas?
+
+- intent: documentosPedidos_emprestimoAutonomo
+  examples: |
+    - Quais documentos devo apresentar para garantir meu empréstimo online?
+    - Que documento preciso para pedir emprestimo para autonomo?
+    - Documentos para emprestimo autonomo
+
+- intent: comparar_emprestimoAutonomo
+  examples: |
+    - Como comparar emprestimo para autonomo
+    - Qual a diferenca do emprestimo para autonomo
+    - Como eu comparo o credito para autonomo com outros creditos
+
+
+
+
 - intent: greet
   examples: |
     - hey

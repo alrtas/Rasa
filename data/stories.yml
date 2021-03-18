@@ -2,6 +2,91 @@ version: "2.0"
 
 stories:
 
+- story: simulador
+  steps:
+    - intent: saudacao
+    - action: utter_saudacao
+    - action: utter_menu
+    - intent: simular_credito_pessoal
+
+- story: vantagens_rasaCred | happy path
+  steps:
+    - intent: saudacao
+    - action: utter_saudacao
+    - action: utter_menu
+    - intent: duvida_rasaCred
+    - action: utter_vantagens_rasaCred
+    - action: utter_algoMais
+    - intent: afirmacao
+    - action: utter_encerramento
+
+- story: vantagens_rasaCred | sad path
+  steps:
+    - intent: saudacao
+    - action: utter_saudacao
+    - action: utter_menu
+    - intent: duvida_rasaCred
+    - action: utter_vantagens_rasaCred
+    - action: utter_algoMais
+    - intent: negacao
+    - action: utter_atendimento
+
+- story: tipos_credito
+  steps:
+    - intent: saudacao
+    - action: utter_saudacao
+    - action: utter_menu
+    - intent: duvida_tipoCredito
+    - action: utter_tipo_credito
+
+- story: quem_oferece
+  steps:
+    - intent: saudacao
+    - action: utter_saudacao
+    - action: utter_menu
+    - intent: duvida_quemOferece
+    - action: utter_quemOferece
+
+- story: faq_emprestimoPessoal_documentosPedidos
+  steps:
+    - intent: saudacao
+    - action: utter_menu
+    - intent: documentosPedidos_emprestimoPessoal
+
+- story: faq_emprestimoPessoal_taxasCobradas
+  steps:
+    - intent: saudacao
+    - action: utter_menu
+    - intent: taxasCobradas_emprestimoPessoal
+    
+
+- story: faq_autonomo
+  steps:
+    - intent: saudacao
+
+- story: faq_garantiaImovel
+  steps:
+    - intent: saudacao
+
+- story: faq_autonomoNegativado
+  steps:
+    - intent: saudacao
+
+- story: faq_semRenda
+  steps:
+    - intent: saudacao
+
+- story: faq_negativado
+  steps:
+    - intent: saudacao
+
+
+
+
+
+
+
+
 - story: happy path
   steps:
   - intent: greet
