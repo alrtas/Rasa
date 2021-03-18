@@ -21,6 +21,7 @@ stories:
     - active_loop: null
     - action: utter_submit
     - action: utter_slots_values
+    - action: utter_atendimento
 
 - story: simulador
   steps:

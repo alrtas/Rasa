@@ -19,6 +19,7 @@ intents:
   - documentosPedidos_emprestimoAutonomo
   - taxasCobradas_emprestimoPessoal
   - documentosPedidos_emprestimoPessoal
+  - out_of_scope
 
 
 entities:
@@ -103,10 +104,13 @@ responses:
     - text: "Para quantos meses devo realizar a simulação?"
 
   utter_slots_values:
-    - text: "Dados ---> Nome: {nome}, CPF: {cpf}"
+    - text: "Dados cadastrados -> Nome: {nome}, CPF: {cpf}"
 
   utter_submit:
     - text: "Dados cadastrados com sucesso"
+
+  utter_out_of_scope:
+    - text: "Desculpa, não consegui entender, podemos tentar novamente?"
 
 session_config:
   session_expiration_time: 60

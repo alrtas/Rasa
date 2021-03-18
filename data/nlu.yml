@@ -136,3 +136,9 @@ nlu:
     - Qual a diferenca do emprestimo para autonomo
     - Como eu comparo o credito para autonomo com outros creditos
 
+- intent: out_of_scope
+  examples: |
+    - qual a capital do canal?
+    - eu quero fazer um pedido?
+    - qual a capital da franca
+    - faça um café

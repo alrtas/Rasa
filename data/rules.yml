@@ -5,7 +5,20 @@ rules:
 - rule: Redireciona atendimento humano em qualquer momento
   steps: 
    - intent: atendimento_humano
-   - action: utter_atendimento
+   - slot_was_set:
+      - requested_slot: nome
+    - slot_was_set:
+      - nome: vincent
+    - slot_was_set:
+      - requested_slot: cpf
+    - slot_was_set:
+      - cpf: 09489601918
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: utter_submit
+    - action: utter_slots_values
+    - action: utter_atendimento
 
 - rule: Encerramento
   steps:
