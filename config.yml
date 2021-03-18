@@ -38,5 +38,4 @@ policies:
       epochs: 100
       constrain_similarities: true
     - name: MappingPolicy
-    - name: RulePolicy
     - name: FormPolicy
